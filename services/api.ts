@@ -7,12 +7,12 @@ export const TMDB_CONFIG = {
 	},
 };
 
-export const fetchMovies = async (searchQuery: string) => {
+export const fetchMovies = async <T>(searchQuery: string): Promise<T> => {
 	const endpoint = searchQuery
 		? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(
 				searchQuery
-		  )}&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
-		: `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
+		  )}&page=1`
+		: `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc&page=1`;
 
 	const response = await fetch(endpoint, {
 		method: "GET",

@@ -22,7 +22,7 @@ const Layout = () => {
 					height: 52,
 					position: "absolute",
 					overflow: "hidden",
-					borderColor: "0f0d23",
+					borderColor: "#0f0d23",
 				},
 			}}
 		>
