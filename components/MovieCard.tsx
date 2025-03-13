@@ -11,14 +11,14 @@ const MovieCard = ({
 	original_language,
 	release_date,
 }: Movie) => {
-	console.log(`https://image.tmdb.org/t/p/w500/${poster_path}`);
-
 	return (
 		<Link href={`/movies/${id}`} asChild>
 			<TouchableOpacity className="w-[31%]">
 				<Image
 					source={{
-						uri: "https://loremflickr.com/320/240",
+						uri:
+							"https://loremflickr.com/320/240" ||
+							`https://image.tmdb.org/t/p/w500/${poster_path}`,
 					}}
 					className="w-full h-52 rounded-lg"
 					resizeMode="cover"

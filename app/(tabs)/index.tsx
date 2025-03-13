@@ -24,7 +24,7 @@ export default function Index() {
 	} = useFetch(() => fetchMovies<Movie[]>(""));
 
 	return (
-		<View className="flex-1 bg-primary ">
+		<View className="flex-1 bg-primary">
 			<StatusBar animated={true} backgroundColor="#160d66" />
 			<Image source={images.bg} className="w-full h-full absolute z-0" />
 			<ScrollView

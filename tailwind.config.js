@@ -13,7 +13,7 @@ module.exports = {
 				secondary: "#151312",
 				light: {
 					100: "#d6c6ff",
-					200: "A8B5db",
+					200: "#A8B5db",
 					300: "#9cA4ab",
 				},
 				dark: {
